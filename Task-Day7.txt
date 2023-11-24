@@ -70,5 +70,5 @@ request.onload = function () {
         {
             console.log(element.name);
         }
-    },0);
+    });
 }  

@@ -1,0 +1,98 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.Container{
+  height: 100%;
+  display: flex;
+}
+.Row{
+  height: 500px;
+  display: flex;
+  background-color: blue;
+  padding: 20px;
+  width: 1000px;
+}
+.Col{
+  height: 500px;
+  background-color: white;
+  width: 300px;
+  border-radius: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.head{
+  height: 20%;
+}
+.body{
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.body-element{
+  padding-left: 20px;
+  padding-top: 3px;
+  margin: 0%;
+  
+}
+.Button{
+  width: 260px;
+  margin-left: 17px;
+  margin-top: 5px;
+  background-color: blue;
+  border-radius: 50px;
+}
+.Button-Text{
+  color: white;
+}
+.solid{
+  border-top: 1px solid #bbb;
+}
+h1{
+  margin-top: 0%;
+}
+h5{
+  margin-bottom: 10px;
+  color: #a8a2a2;
+}

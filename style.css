@@ -1,0 +1,7 @@
+.row{
+    height: 200px;
+    row-gap: 50px;
+}
+.card{
+    height: 100%;
+}

@@ -1,0 +1,68 @@
+1. For the given JSON iterate over all for loops (for, for in, for of, forEach)
+--> JSON:-
+    var Person {
+        Name: "XYZ";
+        Age: X;
+        Address:"XXX";
+        Designation:"ABC";
+    };
+
+    1) for:
+    var len = Person.length;
+    for(var i=0;i<len;i++) {
+        value = Person[i];
+        console.log(key,value);
+    }
+    2) for in:
+    for(var key in Person) {
+        value = Person[key];
+        console.log(key,value);
+    }
+    3) for of:
+    for(var key of Person) {
+        value = Person[key];
+        console.log(key,value);
+    }
+    4) for each:
+    Object.entries(Person).forEach([key,value]) => {
+        console.log(key,value);
+    }
+
+2. Create your own resume data in JSON format.
+--> 
+    {
+        "Resume_Name" : [
+            {
+                "Name":"Sai Yuvaraj Patil",
+                "Age":"22",
+                "Address":"Bangalore",
+                "Designation":"Software Developer",
+                "10th Std":"90.08",
+                "12th Std":"76.67",
+                "Degree":"75 CGPA",
+                "Training":"Full-Stack Development(MERN)",
+                "Primery Skills":"C,C++,Javascript,Python",
+                "Experience":"7 months"
+            }
+        ]
+    }
+
+3. Read about the difference between window, screen and document in Javascript.
+-->
+    window:- 
+        * Window is an object supported by all browser. 
+        * All global javascript objects, functions and variables are members of window object. 
+        * Global variables & function are properties of window.
+        * Document object is also the member of window.
+
+    screen:-
+        * The window.screen object contains information about the user's screen.
+        * The screen returns the reference to the screen object assosiated with the window.
+        * The screen object implements screen interface.
+        * It is a special object used for inspecting properties of the screen.
+
+    document:-
+        * The document object represents your web page.
+        * To access any element in a wepage, we should start with document object.
+        * The document object is a property of window object.
+        * The document object is the root node of web page.

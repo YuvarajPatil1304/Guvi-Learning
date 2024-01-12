@@ -1,0 +1,74 @@
+1. Solving problems using array functions on rest countries data (https://restcountries.com/v3.1/all)
+
+a) Get all the countries of Asia continent/ region using Filter function.
+-->
+var request = new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all','true');
+request.send();
+request.onload = function () {
+	var country_arr = JSON.parse(this.response);
+    var asia = country_arr.filter((element) => {
+  	    if(element.region === 'Asia')
+        {
+    	    return element.name;
+        }
+    }
+    )
+	console.log(asia);
+}
+
+b) Get all the countries with a population of less than 2 lakhs using Filter function.
+--> 
+var request = new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all','true');
+request.send();
+request.onload = function () {
+	var country_arr = JSON.parse(this.response);
+    var Population = country_arr.filter((element) => {
+  	    if(element.population < 200000)
+        {
+    	    return element.name;
+        }
+    }
+    )
+	console.log(Population);
+}
+
+c) Print the following details name, capital, flag using forEach function.
+--> 
+var request = new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all','true');
+request.send();
+request.onload = function () {
+	var country_arr = JSON.parse(this.response);
+    var country = country_arr.forEach((element) => console.log(element.name,element.capital,element.flag))
+	console.log(country);
+}   
+
+d) Print the total population of countries using reduce function.
+-->
+var request = new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all','true');
+request.send();
+request.onload = function () {
+	var country_arr = JSON.parse(this.response);
+    var Total_Population = country_arr.reduce((sum,element) => {
+    		return sum+element.population;
+    },0);
+	console.log(Total_Population);
+}  
+
+e) Print the country that uses US dollars as currency.
+-->
+ar request = new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all','true');
+request.send();
+request.onload = function () {
+	var country_arr = JSON.parse(this.response);
+    country_arr.reduce((element) => {
+    	if(element.currency.code === "USD")
+        {
+            console.log(element.name);
+        }
+    });
+}  

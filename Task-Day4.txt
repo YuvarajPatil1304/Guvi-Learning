@@ -1,0 +1,270 @@
+1. Do below programs in anonymous function & IIFE
+
+a. Print odd Numbers in an array
+--> Anonymous function:-
+    var arr = [1,2,3,4,5]
+    var n = arr.length;
+    var result = function (arr,n) {
+        for(var i=0;i<n;i++)
+        {
+            if(arr[i]%2!=0)
+            {
+                console.log(arr[i]);
+            }
+        }
+    }
+    result(arr,n);
+
+    IIFE:-
+    var arr = [1,2,3,4,5]
+    var n = arr.length;
+    (function (arr,n) {
+        for(var i=0;i<n;i++)
+        {
+            if(arr[i]%2!=0)
+            {
+                console.log(arr[i]);
+            }
+        }
+    })(arr,n);
+
+b. Convert all the strings to title caps in string array.
+--> Anonymous function:-
+    var arr = "a,e,i,o,u"
+    var result = function (arr) {
+        return arr.toUpperCase();
+    } 
+    console.log(result(arr));
+
+    IIFE:-
+    var arr = "a,e,i,o,u"
+    var result = (function (arr) {
+        return arr.toUpperCase();
+    })(arr);
+    console.log(result(arr));
+
+c. Sum of all numbers in an array.
+--> Anonymous function:-
+    var arr = [1,2,3,4,5]
+    var n = arr.length;
+    var result = function (arr,n) {
+        var sum = 0;
+        for(var i=0;i<n;i++)
+        {
+            sum = sum + arr[i];
+        }
+        return sum;
+    } 
+    console.log(result(arr,n));
+
+    IIFE:-
+    var arr = [1,2,3,4,5]
+    var n = arr.length;
+    var result = (function (arr,n) {
+        var sum = 0;
+        for(var i=0;i<n;i++)
+        {
+            sum = sum + arr[i];
+        }
+        return sum;
+    })(arr,n); 
+    console.log(result(arr,n));
+
+d. Return all the prime numbers in an array.
+--> Anonymous function:-
+    var arr = [1,2,3,4,5,6,7,8,9];
+    var result = function(arr) {
+        return (arr.filter((item) => {
+            for (i = 2; i < item; i++) {
+                if (item % i === 0)
+                    return false
+            }
+            return true
+        }))
+    }
+    console.log(result(arr));
+
+    IIFE:-
+    var arr = [1,2,3,4,5,6,7,8,9];
+    var result = (function(arr) {
+        return (arr.filter((item) => {
+            for (i = 2; i < item; i++) {
+                if (item % i === 0)
+                    return false
+            }
+            return true
+        }))
+    })(arr);
+    console.log(result(arr));
+
+e. Return all the palindromes in the array.
+--> Anonymous function:-
+    var arr = "racecar";
+    var result = function(arr) {
+        return (arrayNumber.filter((item) => {
+            let temp = item + ""
+            if ((temp.split('').reverse().join('')) === item + "")
+                return true
+            return false
+        }))
+    }
+    console.log(result(arr));
+
+    IIFE:-
+    var arr = "racecar";
+    var result = (function(arr) {
+        return (arrayNumber.filter((item) => {
+            let temp = item + ""
+            if ((temp.split('').reverse().join('')) === item + "")
+                return true
+            return false
+        }))
+    })(arr);
+    console.log(result(arr));
+
+f. Return median of two sorted arrays of the same size.
+--> Anonymous function:-
+    var arr1 = [1, 2, 3, 4, 5, 8, 10]
+    var arr2 = [8, 9, 10, 12, 16]
+    var resultMedian = function (arr1, arr2) {
+        var result = []
+        var lenArr1 = arr1.length
+        var lenArr2 = arr2.length
+        if (lenArr1 % 2 === 0) {
+            console.log("Median of array 1: " + arr1[lenArr1 / 2])
+        } else {
+            console.log("Median of array 1: " + arr1[(lenArr1 + 1) / 2])
+        }
+        if (lenArr2 % 2 === 0) {
+            console.log("Median of array 2: " + arr2[lenArr2 / 2])
+        } else {
+            console.log("Median of array 2: " + arr2[(lenArr2 + 1) / 2])
+        }
+        return
+    }
+    resultMedian(arr1,arr2);
+
+    IIFE:-
+    var arr1 = [1, 2, 3, 4, 5, 8, 10];
+    var arr2 = [8, 9, 10, 12, 16];
+    (function (arr1, arr2) {
+        var result = [];
+        var lenArr1 = arr1.length;
+        var lenArr2 = arr2.length;
+        if (lenArr1 % 2 === 0) {
+            console.log("Median of array 1: " + arr1[lenArr1 / 2]);
+        } else {
+            console.log("Median of array 1: " + arr1[(lenArr1 + 1) / 2]);
+        }
+        if (lenArr2 % 2 === 0) {
+            console.log("Median of array 2: " + arr2[lenArr2 / 2]);
+        } else {
+            console.log("Median of array 2: " + arr2[(lenArr2 + 1) / 2]);
+        }
+        return
+    })(arr1,arr2);
+
+g. Remove dublicates from an array.
+--> Anonymous function:-
+    var arr = [1,2,3,3,4,5,5,6,7,8,8,9]
+    var result = function (arr, index) {
+        return [...new Set(arr)]
+    };
+    console.log(result);
+
+    IIFE:-
+    var arr = [1,2,3,3,4,5,5,6,7,8,8,9]
+    var result = (function (arr, index) {
+        return [...new Set(arr)]
+    })(arr);
+    console.log(result);
+
+h. Rotate an array by k times.
+--> Anonymous function:-
+    var arr = [1,2,3,4,5];
+    var result = function (arr, k) {
+        for(var i = 0; i < k; i++) {
+            var temp = arr.shift();
+            arr.push(temp);
+        }
+        return arr;
+    }
+    console.log(result(arr,3));
+    
+    IIFE:-
+    var arr = [1,2,3,4,5];
+    var result = (function (arr, k) {
+        for(var i = 0; i < k; i++) {
+            var temp = arr.shift();
+            arr.push(temp);
+        }
+        return arr;
+    })(arr,3);
+    console.log(result);
+
+
+2. Do the below programs in arrow functions.
+
+a. Print odd Numbers in an array
+--> Arrow function:-
+    var arr = [1,2,3,4,5]
+    var n = arr.length;
+    var result =  (arr,n) => {
+        for(var i=0;i<n;i++)
+        {
+            if(arr[i]%2!=0)
+            {
+                console.log(arr[i]);
+            }
+        }
+    }
+    result(arr,n);
+
+b. Convert all the strings to title caps in string array.
+--> Arrow function:-
+    var arr = "a,e,i,o,u"
+    var result = (arr) => {
+        return arr.toUpperCase();
+    } 
+    console.log(result(arr));
+
+c. Sum of all numbers in an array.
+--> Arrow function:-
+    var arr = [1,2,3,4,5]
+    var n = arr.length;
+    var result = (arr,n) => {
+        var sum = 0;
+        for(var i=0;i<n;i++)
+        {
+            sum = sum + arr[i];
+        }
+        return sum;
+    } 
+    console.log(result(arr,n));
+    
+d. Return all the prime numbers in an array.
+--> Arrow function:-
+    var arr = [1,2,3,4,5,6,7,8,9];
+    var result = (arr) => {
+        return (arr.filter((item) => {
+            for (i = 2; i < item; i++) {
+                if (item % i === 0)
+                    return false
+            }
+            return true
+        }))
+    }
+    console.log(result(arr));
+    
+e. Return all the palindromes in the array.
+--> Arrow function:-
+    var arr = "racecar";
+    var result = (arr) => {
+        return (arrayNumber.filter((item) => {
+            let temp = item + ""
+            if ((temp.split('').reverse().join('')) === item + "")
+                return true
+            return false
+        }))
+    }
+    console.log(result(arr));

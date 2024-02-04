@@ -1,0 +1,10 @@
+[{
+    "customer": "Cust1",
+    "booking_Date": "31/01/2024",
+    "start_Time": "10:00pm",
+    "end_Time": "10:00pm",
+    "booking_ID": "1",
+    "room_Id": "1",
+    "status": "Booked",
+    "booked_On": "31/01/2024"
+}]

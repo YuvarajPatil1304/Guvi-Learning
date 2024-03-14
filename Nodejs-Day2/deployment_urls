@@ -1,4 +1,0 @@
-Save the shared code in folder and try to run the nessary commands to activate the server after that use the following URL's to get responses from the server
-Booking URL: http://localhost:3000/booking
-Room URL: http://localhost:3000/room
-Customer URL: http://localhost:3000/customer

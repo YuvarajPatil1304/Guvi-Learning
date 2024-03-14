@@ -18,14 +18,19 @@ GET: https://nodejs-task2-6hom.onrender.com/getAllBookings
 ### Details:
 
 For creating room use Body->json and enter details like:
+
 {
+
     "noSeats": 3,
     "amenities": ["AC", "Geyser"],
     "price": 90
+
 }
 
 For Creating Booking use Body->json and enter details like:
+
 {
+
     "custName": "Yuvaraj",
     "date": "12/19/2020",
     "startTime": "11:00",

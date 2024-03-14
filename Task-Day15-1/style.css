@@ -1,0 +1,41 @@
+  th,
+  td {
+    padding: 5px;
+  }
+  thead {
+    background-color: grey;
+  }
+  tbody {
+    background-color: grey;
+  }
+  tfoot {
+    background-color: white;
+  }
+  .active {
+    color: black;
+    background-color: white;
+  }
+  .frameDiv {
+    margin-top: 10px;
+    position: relative;
+    left: 20%;
+  }
+  input {
+    display: block;
+    margin: 10px;
+    border: 2px solid black;
+    padding: 5px;
+    font-weight: bold;
+  }
+  button {
+    margin: 1px;
+    background-color: grey;
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    width: 55px;
+  }
+  button:hover {
+    color: black;
+    background-color: rgb(190, 184, 184);
+  }
